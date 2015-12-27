@@ -1,0 +1,6 @@
+pet:
+  build: .
+  expose:
+    - "9966"
+  environment:
+    ENV: PROD
