@@ -1,0 +1,9 @@
+selenium:
+  image: selc
+  expose:
+    - "9966"
+  volumes_from:
+	- jenkins_petclinic_1
+  links: 
+	- jenkins_petclinic_1:petclinic
+	
