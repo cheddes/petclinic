@@ -5,4 +5,4 @@ pet:
   environment:
     ENV: PROD
   volumes:
-   - "/var/jenkins_home/.m2:/root/.m2"
+   - /home/docker:/root/.m2
