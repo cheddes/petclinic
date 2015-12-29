@@ -4,3 +4,5 @@ pet:
     - "9966"
   environment:
     ENV: PROD
+  volumes:
+   - /root/.m2:/root/.m2
