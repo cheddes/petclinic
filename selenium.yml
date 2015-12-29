@@ -1,9 +1,8 @@
 selenium:
   image: selc
   expose:
-    - "9966"
-  volumes_from:
-	- jenkins_petclinic_1
-  links: 
-	- jenkins_petclinic_1:petclinic
-	
+    - "4444"
+  volumes:
+   - /home/docker:/root/.m2
+  external_links:
+   - jenkins_pet_1:petclinic
