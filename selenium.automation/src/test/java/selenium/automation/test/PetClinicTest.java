@@ -8,18 +8,24 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 //import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 public class PetClinicTest {
-  private WebDriver driver;
+  //private WebDriver driver;
+  private PhantomJSDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Before
   public void setUp() throws Exception {
-    driver = new ChromeDriver();
+    //driver = new ChromeDriver();
+	DesiredCapabilities capabilities = DesiredCapabilities.phantomjs();
+    driver = new PhantomJSDriver(capabilities);
     baseUrl = "http://172.17.0.3:9966/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
