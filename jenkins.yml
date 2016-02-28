@@ -5,4 +5,4 @@ pet:
   environment:
     ENV: PROD
   volumes:
-   - /home/docker:/root/.m2
+   - /home/docker/maven:/root/.m2
